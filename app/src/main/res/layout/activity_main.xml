@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activity1"
+    android:background="@drawable/fondo6" >
+
+    <TextView
+        android:id="@+id/tituloBienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_titulo"
+        android:gravity="center_horizontal"
+        android:text="@string/emojishop"
+        android:textColor="@color/color_titulo_bienvenida"
+        android:textSize="@dimen/tamaño_titulo_bienvenida"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instruccion_de_pantalla"
+        android:textColor="@color/color_titulo_bienvenida"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_bienvenida2"
+        android:layout_below="@+id/tituloBienvenida"
+        android:layout_marginTop="@dimen/margen_bienvenida2"
+        android:gravity="center_horizontal"
+        android:id="@+id/twIraSegundaVista" />
+</RelativeLayout>

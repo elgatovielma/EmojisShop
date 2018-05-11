@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IniciarCompra">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Bienvenidos!!!"
+      android:layout_marginTop="@dimen/titulos"
+      android:layout_gravity="center_horizontal"
+      android:textStyle="bold"
+      android:textSize="@dimen/tamaño_bienvenida2"/>
+
+    <ListView
+        android:id="@+id/listaAgregados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <Button
+          android:id="@+id/agregar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/agregar_articulos"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentEnd="true"
+          android:onClick="goArticlesList"/>
+
+  </RelativeLayout>
+
+
+</LinearLayout>

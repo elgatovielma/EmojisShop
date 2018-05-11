@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margen_titulo">150dp</dimen>
+    <dimen name="tamaño_titulo_bienvenida">60sp</dimen>
+    <dimen name="tamaño_bienvenida2">25sp</dimen>
+    <dimen name="margen_bienvenida2">50sp</dimen>
+    <dimen name="titulos">15dp</dimen>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EmojiShop</string>
+    <string name="emojishop">EmojiShop</string>
+    <string name="instruccion_de_pantalla">Toque la pantalla para continuar</string>
+    <string name="agregar_articulos">Agregar Articulos</string>
+</resources>
