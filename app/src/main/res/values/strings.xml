@@ -3,4 +3,6 @@
     <string name="emojishop">EmojiShop</string>
     <string name="instruccion_de_pantalla">Toque la pantalla para continuar</string>
     <string name="agregar_articulos">Agregar Articulos</string>
+    <string name="name">Nombre</string>
+    <string name="descripcion">Descripcion</string>
 </resources>

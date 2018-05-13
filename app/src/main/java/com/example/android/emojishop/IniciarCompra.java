@@ -1,5 +1,6 @@
 package com.example.android.emojishop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,5 +43,7 @@ public class IniciarCompra extends AppCompatActivity {
     }
 
     public void goArticlesList(View view) {
+        Intent intent = new Intent(this, listaArticulos.class);
+        startActivity(intent);
     }
 }
