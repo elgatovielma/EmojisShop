@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/idImagen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@mipmap/ic_launcher"
             android:layout_marginTop="@dimen/margin_top_imagen"
             android:layout_marginRight="@dimen/margin_right_imagen"/>
@@ -45,10 +45,10 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="800dp"
         android:layout_height="1dp"
-        android:background="@color/colorPrimary"
         android:layout_below="@+id/idImagen"
-        android:layout_marginTop="@dimen/margin_top_separacion" />
+        android:layout_marginTop="@dimen/margin_top_separacion"
+        android:background="@color/colorPrimary" />
 
 </LinearLayout>

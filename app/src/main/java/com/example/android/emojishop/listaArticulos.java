@@ -27,9 +27,9 @@ public class listaArticulos extends AppCompatActivity {
 
         llenarRecycler();
 
-        adapterEmojies adapter = new adapterEmojies(this,listaEmojies);
+        adapterEmojies adapter = new adapterEmojies(listaEmojies);
         recyclerEmojies.setAdapter(adapter);
-        
+
         recyclerEmojies.setLayoutManager(new LinearLayoutManager(this));
 
 
@@ -38,6 +38,26 @@ public class listaArticulos extends AppCompatActivity {
 
     private void llenarRecycler() {
 
-        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.fondo6));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","Es un emojie muy feliz",R.drawable.donut_circle));
+        listaEmojies.add(new emojiesItems("Carita Feliz","asdasdsaadaadsasaddsaaasdasdasasdassaassaasdsadasasdasdsaaasadsassda",R.drawable.donut_circle));
     }
 }

@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHolderEmojies> {
 
     private final ArrayList<emojiesItems> listaEmojies;
-    private LayoutInflater mInflater;
 
-    public adapterEmojies(Context context, ArrayList<emojiesItems> listaEmojies) {
-        mInflater = LayoutInflater.from(context);
+
+    public adapterEmojies(ArrayList<emojiesItems> listaEmojies) {
+
         this.listaEmojies = listaEmojies;
     }
 
@@ -26,15 +26,15 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
     @NonNull
     @Override
     public ViewHolderEmojies onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View mItemView = mInflater.inflate(R.layout.emojilist_item, parent, false);
-        return new ViewHolderEmojies(mItemView, this);
+        View mItemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.emojilist_item,null,false);
+        return new ViewHolderEmojies(mItemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderEmojies holder, int position) {
 
         holder.etiNombre.setText(listaEmojies.get(position).getNombre());
-        holder.etiInformacion.setText(listaEmojies.get(position).getNombre());
+        holder.etiInformacion.setText(listaEmojies.get(position).getInfo());
         holder.foto.setImageResource(listaEmojies.get(position).getFoto());
 
     }
@@ -51,12 +51,12 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
         TextView etiNombre;
         TextView etiInformacion;
         ImageView foto;
-        final adapterEmojies mAdapter;
 
-        public ViewHolderEmojies(View itemView,adapterEmojies Adapter) {
+
+        public ViewHolderEmojies(View itemView) {
             super(itemView);
 
-            this.mAdapter =Adapter;
+
             etiNombre = itemView.findViewById(R.id.idNombre);
             etiInformacion = itemView.findViewById(R.id.idInfo);
             foto =itemView.findViewById(R.id.idImagen);
