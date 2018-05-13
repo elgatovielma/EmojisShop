@@ -5,4 +5,5 @@
     <string name="agregar_articulos">Agregar Articulos</string>
     <string name="name">Nombre</string>
     <string name="descripcion">Descripcion</string>
+    <string name="orden">Felicitaciones!!! Has ordenado: </string>
 </resources>

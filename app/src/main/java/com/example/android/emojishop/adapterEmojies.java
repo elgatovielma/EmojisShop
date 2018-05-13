@@ -9,12 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 
-public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHolderEmojies> {
+
+
+public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHolderEmojies>
+        implements View.OnClickListener {
 
     private final ArrayList<emojiesItems> listaEmojies;
-
+    private View.OnClickListener listener;
 
     public adapterEmojies(ArrayList<emojiesItems> listaEmojies) {
 
@@ -27,6 +31,7 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
     @Override
     public ViewHolderEmojies onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View mItemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.emojilist_item,null,false);
+        mItemView.setOnClickListener(this);
         return new ViewHolderEmojies(mItemView);
     }
 
@@ -37,6 +42,7 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
         holder.etiInformacion.setText(listaEmojies.get(position).getInfo());
         holder.foto.setImageResource(listaEmojies.get(position).getFoto());
 
+
     }
 
     @Override
@@ -44,6 +50,18 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
         return listaEmojies.size();
     }
 
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (listener!=null){
+            listener.onClick(v);
+        }
+
+    }
 
 
     public class ViewHolderEmojies extends RecyclerView.ViewHolder {
@@ -63,5 +81,7 @@ public class adapterEmojies extends RecyclerView.Adapter<adapterEmojies.ViewHold
 
 
         }
+
+
     }
 }
