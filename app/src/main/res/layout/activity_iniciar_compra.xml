@@ -16,12 +16,14 @@
       android:textStyle="bold"
       android:textSize="@dimen/tamaño_bienvenida2"/>
 
-    <ListView
-        android:id="@+id/listaAgregados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/recyclermarginleft"
+      android:id="@+id/recyclerviewagregarcompra"
+      android:layout_marginTop="@dimen/titulos">
 
-    </ListView>
+  </android.support.v7.widget.RecyclerView>
 
   <RelativeLayout
       android:layout_width="wrap_content"

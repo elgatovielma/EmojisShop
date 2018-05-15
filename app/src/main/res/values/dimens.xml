@@ -12,4 +12,5 @@
     <dimen name="margin_botton_descripcion">15dp</dimen>
     <dimen name="margin_right_descripcion">10dp</dimen>
     <dimen name="margin_top_separacion">11dp</dimen>
+    <dimen name="recyclermarginleft">10dp</dimen>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.android.emojishop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class listaArticulos extends AppCompatActivity {
     ArrayList<emojiesItems> listaEmojies;
     RecyclerView recyclerEmojies;
     MediaPlayer zeldaSound;
+    public static final String EXTRA_REPLY = "com.example.android.twoactivities.extra.REPLY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class listaArticulos extends AppCompatActivity {
         llenarRecycler();
 
 
+
         adapterEmojies adapter = new adapterEmojies(listaEmojies);
 
         adapter.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,11 @@ public class listaArticulos extends AppCompatActivity {
 
                 Toast.makeText(context,getString(R.string.orden) + emogieseleccionado, Toast.LENGTH_SHORT).show();
                 zeldaSound.start();
+
+                Intent replyIntent = new Intent();
+                replyIntent.putExtra(EXTRA_REPLY, emogieseleccionado);
+                setResult(RESULT_OK, replyIntent);
+                finish();
 
 
             }
