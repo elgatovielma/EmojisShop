@@ -1,6 +1,7 @@
 package com.example.android.emojishop;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,11 +15,13 @@ public class listaArticulos extends AppCompatActivity {
 
     ArrayList<emojiesItems> listaEmojies;
     RecyclerView recyclerEmojies;
+    MediaPlayer zeldaSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_articulos);
+        zeldaSound = MediaPlayer.create(this,R.raw.heartcontainer);
 
         creacionRecycler();
     }
@@ -30,6 +33,7 @@ public class listaArticulos extends AppCompatActivity {
 
         llenarRecycler();
 
+
         adapterEmojies adapter = new adapterEmojies(listaEmojies);
 
         adapter.setOnClickListener(new View.OnClickListener() {
@@ -37,9 +41,12 @@ public class listaArticulos extends AppCompatActivity {
             public void onClick(View v) {
 
                 Context context = getApplicationContext();
-                Toast.makeText(context,getString(R.string.orden) +
-                        listaEmojies.get(recyclerEmojies.getChildAdapterPosition(v)).getNombre(),
-                        Toast.LENGTH_SHORT).show();
+                String emogieseleccionado =  listaEmojies.get(recyclerEmojies.getChildAdapterPosition(v)).getNombre();
+
+                Toast.makeText(context,getString(R.string.orden) + emogieseleccionado, Toast.LENGTH_SHORT).show();
+                zeldaSound.start();
+
+
             }
         });
 
