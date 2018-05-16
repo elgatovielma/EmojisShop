@@ -16,29 +16,35 @@
       android:textStyle="bold"
       android:textSize="@dimen/tamaño_bienvenida2"/>
 
-  <android.support.v7.widget.RecyclerView
+
+    <Button
+      android:id="@+id/agregar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="@dimen/recyclermarginleft"
-      android:id="@+id/recyclerviewagregarcompra"
-      android:layout_marginTop="@dimen/titulos">
+      android:text="@string/agregar_articulos"
+      android:onClick="goArticlesList"/>
 
-  </android.support.v7.widget.RecyclerView>
 
-  <RelativeLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/titulos"
+        android:layout_marginLeft="@dimen/recyclermarginleft">
 
-      <Button
-          android:id="@+id/agregar"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="@string/agregar_articulos"
-          android:layout_alignParentBottom="true"
-          android:layout_alignParentEnd="true"
-          android:onClick="goArticlesList"/>
+    </ListView>
 
-  </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </LinearLayout>
