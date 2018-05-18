@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     }
 
-
+    /*Se implenta el metodo onTouch para que al momento que el usuario toque cualquier lado de la pantalla, esta
+     * se dirija a la lista con los articulos de compra*/
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         Intent intent = new Intent(this, IniciarCompra.class);

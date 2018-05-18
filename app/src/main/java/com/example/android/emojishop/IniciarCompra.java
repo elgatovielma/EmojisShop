@@ -30,6 +30,7 @@ public class IniciarCompra extends AppCompatActivity {
     ArrayAdapter adaptador;
     ArrayAdapter  adaptadorRecover;
     int count=1;
+    int recovercount=1;
 
 
 
@@ -44,9 +45,11 @@ public class IniciarCompra extends AppCompatActivity {
 
         if(savedInstanceState!=null){
             recover = savedInstanceState.getStringArrayList("Mewtwo");
+            recovercount=savedInstanceState.getInt("Mew");
             adaptadorRecover = new ArrayAdapter(this, android.R.layout.simple_list_item_1, recover);
             listViewComprasAgregadas.setAdapter(adaptadorRecover);
             listaCompras=recover;
+            count = recovercount;
             Log.d(LOG_TAG3, "true123");
             Log.d( LOG_TAG5, "asd");
 
@@ -54,7 +57,7 @@ public class IniciarCompra extends AppCompatActivity {
 
     }
 
-
+    /*Se crea el metodo para crear la lista de los articulos, esta no puede exceder un total de 10 articulos*/
     public void goArticlesList(View view) {
         if (count<=10){
             Intent intent = new Intent(this, listaArticulos.class);
@@ -64,7 +67,7 @@ public class IniciarCompra extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"No puede agregar mas",Toast.LENGTH_SHORT).show();
         }
     }
-
+    /*Metodo utilizado para traer el articulo de la lista a la lista de compras*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -84,12 +87,13 @@ public class IniciarCompra extends AppCompatActivity {
             }
         }
     }
-
+    /*Metodo utilizado para guardar lo que se tiene en la pantalla y que este contenido no se pierda si se rota la misma*/
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
         outState.putStringArrayList("Mewtwo",listaCompras);
+        outState.putInt("Mew", count);
 
     }
 
